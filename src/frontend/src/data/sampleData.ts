@@ -1,0 +1,187 @@
+import type { Destination, Package } from "../backend.d";
+
+export const SAMPLE_DESTINATIONS: Destination[] = [
+  {
+    id: BigInt(1),
+    name: "Santorini",
+    country: "Greece",
+    destinationType: "Beach",
+    description:
+      "Experience the iconic whitewashed buildings perched on volcanic cliffs above the deep blue Aegean Sea. Santorini offers breathtaking sunsets, world-class cuisine, and a romantic atmosphere that makes it one of the world's most photographed destinations.",
+    highlights: [
+      "Iconic Blue Domed Churches",
+      "Sunset Views from Oia",
+      "Volcanic Black Sand Beaches",
+      "Award-Winning Local Wineries",
+      "Traditional Cycladic Architecture",
+    ],
+    price: BigInt(2899),
+    imageUrl: "/assets/generated/dest-santorini.dim_400x300.jpg",
+    isFeatured: true,
+  },
+  {
+    id: BigInt(2),
+    name: "Maldives",
+    country: "Maldives",
+    destinationType: "Beach",
+    description:
+      "Step into paradise with overwater bungalows perched above crystal-clear turquoise lagoons. The Maldives is the ultimate luxury escape, offering pristine coral reefs, vibrant marine life, and unparalleled seclusion for those seeking absolute tranquility.",
+    highlights: [
+      "Overwater Villa Experience",
+      "World-Class Snorkeling & Diving",
+      "Private Sunset Cruises",
+      "Pristine White Sand Beaches",
+      "Bioluminescent Plankton Nights",
+    ],
+    price: BigInt(4599),
+    imageUrl: "/assets/generated/dest-maldives.dim_400x300.jpg",
+    isFeatured: true,
+  },
+  {
+    id: BigInt(3),
+    name: "Tokyo",
+    country: "Japan",
+    destinationType: "City",
+    description:
+      "Where ancient tradition meets futuristic innovation. Tokyo is a city of contrasts — serene Buddhist temples beside neon-lit towers, centuries-old tea ceremonies alongside cutting-edge technology, and some of the world's finest culinary experiences at every corner.",
+    highlights: [
+      "Shibuya Crossing at Night",
+      "Tsukiji Fish Market Tours",
+      "Cherry Blossom Season",
+      "Michelin Star Dining",
+      "Mt. Fuji Day Trips",
+    ],
+    price: BigInt(3199),
+    imageUrl: "/assets/generated/dest-tokyo.dim_400x300.jpg",
+    isFeatured: true,
+  },
+  {
+    id: BigInt(4),
+    name: "Patagonia",
+    country: "Argentina / Chile",
+    destinationType: "Adventure",
+    description:
+      "At the edge of the world, Patagonia offers some of the most dramatic and untouched wilderness on Earth. Towering granite spires, glacial lakes of impossible turquoise, and vast open plains make this a bucket-list destination for adventure seekers and nature lovers.",
+    highlights: [
+      "Torres del Paine Trekking",
+      "Perito Moreno Glacier",
+      "Condor Spotting",
+      "Wild Camping Under Stars",
+      "Kayaking Glacial Fjords",
+    ],
+    price: BigInt(3799),
+    imageUrl: "/assets/generated/dest-patagonia.dim_400x300.jpg",
+    isFeatured: false,
+  },
+  {
+    id: BigInt(5),
+    name: "Bali",
+    country: "Indonesia",
+    destinationType: "Culture",
+    description:
+      "The Island of the Gods captivates with its emerald rice terraces, ornate Hindu temples, and warm-spirited people. Bali offers a deeply spiritual experience alongside world-class surfing, luxurious spa retreats, and a thriving arts and culinary scene.",
+    highlights: [
+      "Tegallalang Rice Terraces",
+      "Uluwatu Cliff Temple",
+      "Kecak Fire Dance Performance",
+      "Traditional Balinese Cooking Class",
+      "Sunrise Hike up Mount Batur",
+    ],
+    price: BigInt(1999),
+    imageUrl: "/assets/generated/dest-bali.dim_400x300.jpg",
+    isFeatured: true,
+  },
+  {
+    id: BigInt(6),
+    name: "Marrakech",
+    country: "Morocco",
+    destinationType: "Culture",
+    description:
+      "Marrakech is a sensory explosion of colour, fragrance, and sound. Navigate the labyrinthine medina, haggle in ancient souks, and retreat to opulent riads with hidden garden courtyards. A city where every alleyway holds a new discovery.",
+    highlights: [
+      "Jemaa el-Fna Night Market",
+      "Majorelle Garden",
+      "Traditional Hammam Experience",
+      "Sahara Desert Day Trip",
+      "Atlas Mountains Excursion",
+    ],
+    price: BigInt(1699),
+    imageUrl: "/assets/generated/dest-morocco.dim_400x300.jpg",
+    isFeatured: false,
+  },
+];
+
+export const SAMPLE_PACKAGES: Package[] = [
+  {
+    id: BigInt(1),
+    title: "Maldives Luxury Escape",
+    destinationId: BigInt(2),
+    durationDays: BigInt(7),
+    price: BigInt(4599),
+    imageUrl: "/assets/generated/pkg-luxury.dim_400x500.jpg",
+    inclusions: [
+      "Overwater Villa",
+      "All-Inclusive Meals",
+      "Spa Credit",
+      "Water Sports",
+      "Airport Transfer",
+    ],
+    isPopular: true,
+  },
+  {
+    id: BigInt(2),
+    title: "Patagonia Adventure Trek",
+    destinationId: BigInt(4),
+    durationDays: BigInt(10),
+    price: BigInt(3799),
+    imageUrl: "/assets/generated/pkg-adventure.dim_400x500.jpg",
+    inclusions: [
+      "Guided Trekking",
+      "Camping Gear",
+      "Park Fees",
+      "Glacier Boat Tour",
+      "Airport Transfers",
+    ],
+    isPopular: true,
+  },
+  {
+    id: BigInt(3),
+    title: "Paris City Romance",
+    destinationId: BigInt(3),
+    durationDays: BigInt(5),
+    price: BigInt(2299),
+    imageUrl: "/assets/generated/pkg-city.dim_400x500.jpg",
+    inclusions: [
+      "4-Star Hotel",
+      "Seine River Cruise",
+      "Louvre Skip-the-Line",
+      "French Cooking Class",
+      "CDG Transfers",
+    ],
+    isPopular: true,
+  },
+  {
+    id: BigInt(4),
+    title: "Angkor Cultural Journey",
+    destinationId: BigInt(5),
+    durationDays: BigInt(8),
+    price: BigInt(2199),
+    imageUrl: "/assets/generated/pkg-culture.dim_400x500.jpg",
+    inclusions: [
+      "Temple Passes",
+      "Expert Local Guide",
+      "Traditional Homestay",
+      "Sunrise Angkor Tour",
+      "Transfers",
+    ],
+    isPopular: true,
+  },
+];
+
+export const TYPE_FILTERS = [
+  "All",
+  "Beach",
+  "Adventure",
+  "City",
+  "Culture",
+] as const;

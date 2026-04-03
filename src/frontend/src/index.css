@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Deep black background */
+    --background: 0.07 0 0;
+    --foreground: 0.96 0 0;
+
+    /* Card surfaces */
+    --card: 0.13 0 0;
+    --card-foreground: 0.96 0 0;
+
+    --popover: 0.16 0 0;
+    --popover-foreground: 0.96 0 0;
+
+    /* Primary = accent red #E00000 */
+    --primary: 0.5 0.22 27.3;
+    --primary-foreground: 0.96 0 0;
+
+    /* Secondary = white surface buttons */
+    --secondary: 0.97 0 0;
+    --secondary-foreground: 0.09 0 0;
+
+    /* Muted */
+    --muted: 0.16 0 0;
+    --muted-foreground: 0.6 0 0;
+
+    /* Accent */
+    --accent: 0.5 0.22 27.3;
+    --accent-foreground: 0.96 0 0;
+
+    /* Destructive */
+    --destructive: 0.5 0.22 27.3;
+    --destructive-foreground: 0.96 0 0;
+
+    /* Borders */
+    --border: 0.2 0 0;
+    --input: 0.2 0 0;
+    --ring: 0.5 0.22 27.3;
+
+    /* Chart colors */
+    --chart-1: 0.5 0.22 27.3;
+    --chart-2: 0.6 0.12 180;
+    --chart-3: 0.4 0.07 230;
+    --chart-4: 0.75 0.18 85;
+    --chart-5: 0.65 0.19 70;
+
+    /* Sidebar */
+    --sidebar: 0.1 0 0;
+    --sidebar-foreground: 0.96 0 0;
+    --sidebar-primary: 0.5 0.22 27.3;
+    --sidebar-primary-foreground: 0.96 0 0;
+    --sidebar-accent: 0.16 0 0;
+    --sidebar-accent-foreground: 0.96 0 0;
+    --sidebar-border: 0.2 0 0;
+    --sidebar-ring: 0.5 0.22 27.3;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-display {
+    font-family: "Bebas Neue", "Oswald", sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-heading {
+    font-family: "Oswald", sans-serif;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-red {
+    color: #e00000;
+  }
+
+  .bg-red {
+    background-color: #e00000;
+  }
+
+  .bg-red-hover:hover {
+    background-color: #c80000;
+  }
+
+  .border-red {
+    border-color: #e00000;
+  }
+}
